@@ -1,0 +1,44 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/react:
+    dependencies:
+      react-reconciler:
+        specifier: workspace:*
+        version: link:../react-reconciler
+      shared:
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/react-dom:
+    dependencies:
+      react-reconciler:
+        specifier: workspace:*
+        version: link:../react-reconciler
+      shared:
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/react-reconciler:
+    dependencies:
+      scheduler:
+        specifier: workspace:*
+        version: link:../scheduler
+      shared:
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/scheduler:
+    dependencies:
+      shared:
+        specifier: workspace:*
+        version: link:../shared
+
+  packages/shared: {}
